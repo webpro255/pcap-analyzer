@@ -25,6 +25,12 @@ jobs:
         python -m pip install --upgrade pip
         pip install -r requirements.txt
 
+    - name: Install TShark
+      run: |
+        sudo apt-get update
+        echo "wireshark-common wireshark-common/install-setuid boolean true" | sudo debconf-set-selections
+        sudo apt-get install -y tshark
+
     - name: Run Tests
       env:
         PYTHONPATH: ${{ github.workspace }}
