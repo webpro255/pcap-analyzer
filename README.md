@@ -34,7 +34,7 @@ pip3 install -r requirements.txt
 ```
 ### Usage
 ```
-python pcap_analyzer/analyzer.py <path_to_pcap_file> --report <report_format>
+python3 pcap_analyzer/analyzer.py <path_to_pcap_file> --report <report_format>
 
 ```
 - `<path_to_pcap_file>`: Path to the pcap file you want to analyze.
@@ -42,7 +42,7 @@ python pcap_analyzer/analyzer.py <path_to_pcap_file> --report <report_format>
 ### Example
 
 ```
-python pcap_analyzer/analyzer.py tests/test_pcap_files/sample.pcap --report html
+python3 pcap_analyzer/analyzer.py tests/test_pcap_files/sample.pcap --report html
 ```
 
 ### Testing
