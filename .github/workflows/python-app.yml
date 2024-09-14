@@ -36,13 +36,3 @@ jobs:
         mkdir -p tests/test_pcap_files
         sudo tshark -w tests/test_pcap_files/sample.pcapng -a duration:5
 
-    - name: Notify Tests are Skipped
-      run: |
-        echo "Skipping tests as sample.pcapng is not available."
-
-    - name: Run Tests
-      if: false  # This condition skips the test step
-      env:
-        PYTHONPATH: ${{ github.workspace }}
-      run: |
-        python -m unittest discover -v tests
