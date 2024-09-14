@@ -30,9 +30,3 @@ jobs:
         sudo apt-get update
         echo "wireshark-common wireshark-common/install-setuid boolean true" | sudo debconf-set-selections
         sudo apt-get install -y tshark
-
-    - name: Generate sample.pcapng
-      run: |
-        mkdir -p tests/test_pcap_files
-        sudo tshark -w tests/test_pcap_files/sample.pcapng -a duration:5
-
