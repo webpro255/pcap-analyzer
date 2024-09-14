@@ -24,7 +24,7 @@ A Python tool to analyze pcap files for suspicious or malicious network activiti
 ### Clone the Repository
 
 ```bash
-git clone https://github.com/yourusername/pcap-analyzer.git
+git clone https://github.com/webpro255/pcap-analyzer.git
 cd pcap-analyzer
 ```
 ### Install Dependencies
