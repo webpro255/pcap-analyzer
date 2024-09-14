@@ -7,22 +7,15 @@ from pcap_analyzer.detection import DetectionEngine
 
 class TestPcapAnalyzer(unittest.TestCase):
     def test_detect_suspicious_activities(self):
-        # Check if the sample pcap file exists
-        pcap_file = 'tests/test_pcap_files/sample.pcap'
+        pcap_file = os.path.join('tests', 'test_pcap_files', 'sample.pcapng')
         self.assertTrue(os.path.exists(pcap_file), f"PCAP file not found: {pcap_file}")
-
-        # Read the pcap file
-        packets = read_pcap_file(pcap_file)
         
-        # Run detection
-        detections = DetectionEngine.detect_suspicious_activities(packets)
-        
-        # Assert that detections is a list
-        self.assertIsInstance(detections, list)
-        
-        # You can add more assertions based on expected results
-        # For example, if you know how many detections should be found
-        # self.assertEqual(len(detections), expected_number_of_detections)
+        try:
+            packets = read_pcap_file(pcap_file)
+            detections = DetectionEngine.detect_suspicious_activities(packets)
+            self.assertIsInstance(detections, list)
+        except Exception as e:
+            self.fail(f"Test failed due to an exception: {e}")
 
 if __name__ == '__main__':
     unittest.main()
