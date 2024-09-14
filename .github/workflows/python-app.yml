@@ -25,10 +25,8 @@ jobs:
         python -m pip install --upgrade pip
         pip install -r requirements.txt
 
-    - name: Install package
-      run: |
-        pip install -e .
-
     - name: Run Tests
+      env:
+        PYTHONPATH: ${{ github.workspace }}
       run: |
         python -m unittest discover -v tests
