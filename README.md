@@ -1,5 +1,7 @@
 ![GitHub license](https://img.shields.io/github/license/webpro255/pcap-analyzer)
 ![GitHub issues](https://img.shields.io/github/issues/webpro255/pcap-analyzer)
+![Build Status](https://github.com/webpro255/pcap-analyzer/actions/workflows/python-app.yml/badge.svg)
+
 # PCAP Analyzer
 
 A Python tool to analyze pcap files for suspicious or malicious network activities.
